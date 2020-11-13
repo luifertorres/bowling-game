@@ -1,15 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CF3C4BB6-9E8F-4C7C-ACB9-271C0028180A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGame.Tests", "test\BowlingGame.Tests\BowlingGame.Tests.csproj", "{25ADAB28-84E4-4E11-97D2-F3048919F9B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BowlingGame.Tests", "test\BowlingGame.Tests\BowlingGame.Tests.csproj", "{25ADAB28-84E4-4E11-97D2-F3048919F9B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F627229F-E418-44FE-B719-7B8F04286117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGame", "src\BowlingGame\BowlingGame.csproj", "{3221D32E-A290-40F8-AF46-1E3F73A886AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BowlingGame", "src\BowlingGame\BowlingGame.csproj", "{3221D32E-A290-40F8-AF46-1E3F73A886AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1406E30-5A75-4156-AA43-4CF3AB4B4251}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +24,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{25ADAB28-84E4-4E11-97D2-F3048919F9B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -49,8 +51,14 @@ Global
 		{3221D32E-A290-40F8-AF46-1E3F73A886AD}.Release|x86.ActiveCfg = Release|Any CPU
 		{3221D32E-A290-40F8-AF46-1E3F73A886AD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{25ADAB28-84E4-4E11-97D2-F3048919F9B1} = {CF3C4BB6-9E8F-4C7C-ACB9-271C0028180A}
 		{3221D32E-A290-40F8-AF46-1E3F73A886AD} = {F627229F-E418-44FE-B719-7B8F04286117}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {707EEA00-AB59-49DD-85AE-708869579C31}
 	EndGlobalSection
 EndGlobal
