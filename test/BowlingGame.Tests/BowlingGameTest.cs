@@ -37,6 +37,17 @@ namespace BowlingGame.Tests
             Assert.Equal(16, _game.Score);
         }
 
+        [Fact]
+        public void TestOneStrike()
+        {
+            RollStrike();
+            _game.Roll(3);
+            _game.Roll(4);
+            RollMany(16, 0);
+
+            Assert.Equal(24, _game.Score);
+        }
+
         private void RollMany(int rolls, int pins)
         {
             for (var rollCount = 0; rollCount < rolls; rollCount++)
@@ -49,6 +60,11 @@ namespace BowlingGame.Tests
         {
             _game.Roll(5);
             _game.Roll(5);
+        }
+
+        private void RollStrike()
+        {
+            _game.Roll(10);
         }
     }
 }

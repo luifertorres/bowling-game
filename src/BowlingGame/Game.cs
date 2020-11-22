@@ -14,16 +14,21 @@
 
                 for (var frames = 0; frames < 10; frames++)
                 {
-                    if (IsSpare(rollCount))
+                    if (IsStrike(rollCount))
                     {
-                        score += 10 + _rolls[rollCount + 2];
+                        score += 10 + GetBonusForStrike(rollCount);
+                        rollCount++;
+                    }
+                    else if (IsSpare(rollCount))
+                    {
+                        score += 10 + GetBonusForSpare(rollCount);
+                        rollCount += 2;
                     }
                     else
                     {
-                        score += _rolls[rollCount] + _rolls[rollCount + 1];
+                        score += GetPinsKnockedDownInFrame(rollCount);
+                        rollCount += 2;
                     }
-
-                    rollCount += 2;
                 }
 
                 return score;
@@ -35,9 +40,29 @@
             _rolls[_currentRoll++] = pins;
         }
 
+        private bool IsStrike(int rollCount)
+        {
+            return _rolls[rollCount] == 10;
+        }
+
         private bool IsSpare(int rollCount)
         {
             return _rolls[rollCount] + _rolls[rollCount + 1] == 10;
+        }
+
+        private int GetBonusForSpare(int rollCount)
+        {
+            return _rolls[rollCount + 2];
+        }
+
+        private int GetBonusForStrike(int rollCount)
+        {
+            return _rolls[rollCount + 1] + _rolls[rollCount + 2];
+        }
+
+        private int GetPinsKnockedDownInFrame(int rollCount)
+        {
+            return _rolls[rollCount] + _rolls[rollCount + 1];
         }
     }
 }
