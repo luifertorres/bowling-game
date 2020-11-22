@@ -48,6 +48,14 @@ namespace BowlingGame.Tests
             Assert.Equal(24, _game.Score);
         }
 
+        [Fact]
+        public void TestPerfectGame()
+        {
+            RollMany(12, 10);
+
+            Assert.Equal(300, _game.Score);
+        }
+
         private void RollMany(int rolls, int pins)
         {
             for (var rollCount = 0; rollCount < rolls; rollCount++)
