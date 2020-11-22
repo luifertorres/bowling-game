@@ -27,12 +27,28 @@ namespace BowlingGame.Tests
             Assert.Equal(20, _game.Score);
         }
 
+        [Fact]
+        public void TestOneSpare()
+        {
+            RollSpare();
+            _game.Roll(3);
+            RollMany(17, 0);
+
+            Assert.Equal(16, _game.Score);
+        }
+
         private void RollMany(int rolls, int pins)
         {
             for (var rollCount = 0; rollCount < rolls; rollCount++)
             {
                 _game.Roll(pins);
             }
+        }
+
+        private void RollSpare()
+        {
+            _game.Roll(5);
+            _game.Roll(5);
         }
     }
 }
